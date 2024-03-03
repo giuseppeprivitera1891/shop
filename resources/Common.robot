@@ -12,6 +12,9 @@ Open my browser
     Maximize Browser Window
     Set Selenium Speed    0.3 seconds
 
+Close my browser
+    Close Browser
+
 Start video
     [Arguments]    ${nameTestCase}
     Start Video Recording    name=${NameTestCase}     embed=True     monitor=2
