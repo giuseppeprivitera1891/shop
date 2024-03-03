@@ -1,9 +1,5 @@
 *** Settings ***
 Resource    ../pages/Login.robot
-<<<<<<< HEAD
-
-*** Keywords ***
-=======
 Resource    ../resources/Common.robot
 
 *** Keywords ***
