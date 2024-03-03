@@ -14,7 +14,6 @@ Invalid login
     [Arguments]    ${username}     ${password}     ${message}
     Login.Invalid Login    ${username}     ${password}     ${message}
 
->>>>>>> 359f650 (Added the test case "Invalid login")
 Valid login
     [Arguments]    ${username}     ${password}
     Login.Valid Login     ${username}     ${password}
