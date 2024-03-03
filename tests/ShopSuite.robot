@@ -1,17 +1,26 @@
 *** Settings ***
 Resource    ../resources/ShopApp.robot
-Test Setup    Open My Browser
-Test Teardown    Close My Browser
+Suite Setup    Open My Browser
+Suite Teardown    Close My Browser
 
 *** Variables ***
 ${username}     rahulshettyacademy
 ${password}     learning
-
+${message}     Incorrect username/password.
+${wrongUsername}     username 
+${wrongPassword}     password
 
 *** Test Cases ***
+Invalid login
+    [Documentation]    Invalid login
+    [Tags]    invalidLogin   
+    ShopApp.Start video     Invalid Login 
+    ShopApp.Invalid Login    ${wrongUsername}     ${wrongPassword}      ${message}
+    ShopApp.Stop video
+
 Valid credentials login
-    [Documentation]    Valid Login
+    [Documentation]    Valid login
     [Tags]    validLogin
-    Start Video    name="Valid credentials login"
+    ShopApp.Start video    Valid credentials login
     ShopApp.Valid Login    ${username}     ${password}
-    Stop All Video
+    ShopApp.Stop video

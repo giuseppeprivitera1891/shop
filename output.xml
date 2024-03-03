@@ -1,138 +1,126 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0 (Python 3.10.12 on linux)" generated="2024-03-03T20:26:54.449417" rpa="false" schemaversion="5">
+<robot generator="Robot 7.0 (Python 3.10.12 on linux)" generated="2024-03-03T22:59:48.260387" rpa="false" schemaversion="5">
 <suite id="s1" name="Tests" source="/home/giuseppe/PycharmProjects/shop/tests">
 <suite id="s1-s1" name="ShopSuite" source="/home/giuseppe/PycharmProjects/shop/tests/ShopSuite.robot">
-<test id="s1-s1-t1" name="Valid credentials login" line="12">
 <kw name="Open my browser" owner="Common" type="SETUP">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-03-03T20:26:54.915342" level="INFO">Opening browser 'chrome' to base url 'https://rahulshettyacademy.com/loginpagePractise/'.</msg>
+<msg time="2024-03-03T22:59:48.752898" level="INFO">Opening browser 'chrome' to base url 'https://rahulshettyacademy.com/loginpagePractise/'.</msg>
 <arg>${url}</arg>
 <arg>${browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-03-03T20:26:54.915059" elapsed="1.594758"/>
+<status status="PASS" start="2024-03-03T22:59:48.752613" elapsed="1.624500"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-03-03T20:26:56.510179" elapsed="0.105612"/>
+<status status="PASS" start="2024-03-03T22:59:50.377626" elapsed="0.110556"/>
 </kw>
 <kw name="Set Selenium Speed" owner="SeleniumLibrary">
 <arg>0.3 seconds</arg>
 <doc>Sets the delay that is waited after each Selenium command.</doc>
-<status status="PASS" start="2024-03-03T20:26:56.616391" elapsed="0.000632"/>
+<status status="PASS" start="2024-03-03T22:59:50.488848" elapsed="0.001003"/>
 </kw>
-<status status="PASS" start="2024-03-03T20:26:54.914235" elapsed="1.703064"/>
+<status status="PASS" start="2024-03-03T22:59:48.751852" elapsed="1.738504"/>
 </kw>
+<test id="s1-s1-t1" name="Invalid login" line="14">
+<kw name="Start video" owner="ShopApp">
 <kw name="Start video" owner="Common">
 <kw name="Start Video Recording" owner="ScreenCapLibrary">
-<msg time="2024-03-03T20:26:58.711673" level="INFO">Automatically setting a fps of 14.5</msg>
+<msg time="2024-03-03T22:59:52.572543" level="INFO">Automatically setting a fps of 12.5</msg>
 <arg>name=${NameTestCase}</arg>
 <arg>embed=True</arg>
-<arg>monitor=2</arg>
 <doc>Starts the recording of a video in the background with the specified ``name``.
 The recording can be stopped by calling the `Stop Video Recording` keyword.</doc>
-<status status="PASS" start="2024-03-03T20:26:56.618824" elapsed="2.093697"/>
+<status status="PASS" start="2024-03-03T22:59:50.494999" elapsed="2.078193"/>
 </kw>
-<arg>name="Valid credentials login"</arg>
-<status status="PASS" start="2024-03-03T20:26:56.617880" elapsed="2.094859"/>
+<arg>${videoName}</arg>
+<status status="PASS" start="2024-03-03T22:59:50.494091" elapsed="2.079271"/>
 </kw>
-<kw name="Valid login" owner="ShopApp">
-<kw name="Valid login" owner="Login">
+<arg>Invalid Login</arg>
+<status status="PASS" start="2024-03-03T22:59:50.492501" elapsed="2.080958"/>
+</kw>
+<kw name="Invalid login" owner="ShopApp">
+<kw name="Invalid login" owner="Login">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-03-03T20:26:58.715390" level="INFO">Typing text 'rahulshettyacademy' into text field 'id:username'.</msg>
+<msg time="2024-03-03T22:59:52.575563" level="INFO">Typing text 'username' into text field 'id:username'.</msg>
 <arg>${inputUsername}</arg>
 <arg>${email}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-03T20:26:58.714775" elapsed="1.047906"/>
+<status status="PASS" start="2024-03-03T22:59:52.575169" elapsed="1.061851"/>
 </kw>
 <kw name="Input Password" owner="SeleniumLibrary">
-<msg time="2024-03-03T20:26:59.763309" level="INFO">Typing password into text field 'id:password'.</msg>
-<msg time="2024-03-03T20:27:00.412599" level="INFO">Temporally setting log level to: NONE</msg>
+<msg time="2024-03-03T22:59:53.638758" level="INFO">Typing password into text field 'id:password'.</msg>
+<msg time="2024-03-03T22:59:54.301540" level="INFO">Temporally setting log level to: NONE</msg>
 <arg>${inputPassword}</arg>
 <arg>${password}</arg>
 <doc>Types the given password into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-03T20:26:59.762951" elapsed="1.005963"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-03-03T20:27:00.769686" level="INFO">Clicking element 'xpath://label[2]//input[1]'.</msg>
-<arg>${userType}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-03T20:27:00.769269" elapsed="0.761474"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${okayButtonModal}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-03-03T20:27:01.531794" elapsed="0.707406"/>
+<status status="PASS" start="2024-03-03T22:59:53.637814" elapsed="1.040860"/>
 </kw>
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2024-03-03T20:27:02.242741" level="INFO">Clicking button 'xpath://button[@id='okayBtn']'.</msg>
-<arg>${okayButtonModal}</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-03T20:27:02.240673" elapsed="1.728703"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${termCheckbox}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-03-03T20:27:03.970886" elapsed="0.698785"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-03-03T20:27:04.671926" level="INFO">Clicking element 'id:terms'.</msg>
-<arg>${termCheckbox}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-03T20:27:04.670668" elapsed="0.774580"/>
-</kw>
-<kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2024-03-03T20:27:05.447794" level="INFO">Clicking button 'id:signInBtn'.</msg>
+<msg time="2024-03-03T22:59:54.679496" level="INFO">Clicking button 'id:signInBtn'.</msg>
 <arg>${signInButton}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-03T20:27:05.446617" elapsed="1.080479"/>
+<status status="PASS" start="2024-03-03T22:59:54.679103" elapsed="1.016254"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${invalidLoginBanner}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-03-03T22:59:55.695840" elapsed="2.311774"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-03-03T22:59:58.008945" level="INFO">Verifying element 'css:.alert.alert-danger.col-md-12' contains exact text 'Incorrect username/password.'.</msg>
+<arg>${invalidLoginBanner}</arg>
+<arg>${message}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-03-03T22:59:58.008195" elapsed="0.639778"/>
 </kw>
 <arg>${username}</arg>
 <arg>${password}</arg>
-<status status="PASS" start="2024-03-03T20:26:58.714140" elapsed="7.813596"/>
+<arg>${message}</arg>
+<status status="PASS" start="2024-03-03T22:59:52.574595" elapsed="6.074565"/>
 </kw>
-<arg>${username}</arg>
-<arg>${password}</arg>
-<status status="PASS" start="2024-03-03T20:26:58.713304" elapsed="7.814869"/>
+<arg>${wrongUsername}</arg>
+<arg>${wrongPassword}</arg>
+<arg>${message}</arg>
+<status status="PASS" start="2024-03-03T22:59:52.573973" elapsed="6.076791"/>
 </kw>
+<kw name="Stop video" owner="ShopApp">
 <kw name="Stop all video" owner="Common">
-<kw name="Stop Video Recording" owner="ScreenCapLibrary">
-<msg time="2024-03-03T20:27:06.531309" level="FAIL">IndexError: list index out of range</msg>
-<arg>save_to_disk=False</arg>
-<doc>Stops the video recording corresponding to the given ``alias`` and generates the file in WebM format. If no
-``alias`` is specified, the last opened recording will be closed. If there are more recordings with the same
-alias all of them will be closed. If ``embed`` argument was set to
-``True`` the video will be displayed in the log file.
-Furthermore, if the ``save_to_disk`` parameter is set to ``False``, the video will be embedded and available in
-the log file only.</doc>
-<status status="FAIL" start="2024-03-03T20:27:06.530564" elapsed="0.003270">IndexError: list index out of range</status>
+<kw name="Stop All Video Recordings" owner="ScreenCapLibrary">
+<msg time="2024-03-03T22:59:58.720461" level="INFO" html="true">&lt;a href="results/videos/Invalid%20Login_2.webm"&gt;&lt;video width="800px" autoplay&gt;&lt;source src="results/videos/Invalid%20Login_2.webm" type="video/webm"&gt;&lt;/video&gt;&lt;/a&gt;</msg>
+<arg>save_to_disk=True</arg>
+<doc>Stops all the video recordings and generates the files in WebM format. If ``embed`` argument
+was set to ``True`` the videos will be displayed in the log file.</doc>
+<status status="PASS" start="2024-03-03T22:59:58.652733" elapsed="0.067874"/>
 </kw>
-<status status="FAIL" start="2024-03-03T20:27:06.529334" elapsed="0.005040">IndexError: list index out of range</status>
+<status status="PASS" start="2024-03-03T22:59:58.652248" elapsed="0.068520"/>
 </kw>
+<status status="PASS" start="2024-03-03T22:59:58.651485" elapsed="0.069374"/>
+</kw>
+<doc>Invalid login</doc>
+<tag>invalidLogin</tag>
+<status status="PASS" start="2024-03-03T22:59:50.490697" elapsed="8.230417"/>
+</test>
 <kw name="Close my browser" owner="Common" type="TEARDOWN">
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-03-03T20:27:06.536108" elapsed="0.364039"/>
+<status status="PASS" start="2024-03-03T22:59:58.722334" elapsed="0.356641"/>
 </kw>
-<status status="PASS" start="2024-03-03T20:27:06.535322" elapsed="0.365448"/>
+<status status="PASS" start="2024-03-03T22:59:58.721992" elapsed="0.357234"/>
 </kw>
-<doc>Valid Login</doc>
-<tag>validLogin</tag>
-<status status="FAIL" start="2024-03-03T20:26:54.913520" elapsed="11.987795">IndexError: list index out of range</status>
-</test>
-<status status="FAIL" start="2024-03-03T20:26:54.471827" elapsed="12.432218"/>
+<status status="PASS" start="2024-03-03T22:59:48.285966" elapsed="10.793370"/>
 </suite>
-<status status="FAIL" start="2024-03-03T20:26:54.450456" elapsed="12.456652"/>
+<status status="PASS" start="2024-03-03T22:59:48.261675" elapsed="10.818936"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="1" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="0" fail="1" skip="0">validLogin</stat>
+<stat pass="1" fail="0" skip="0">invalidLogin</stat>
 </tag>
 <suite>
-<stat pass="0" fail="1" skip="0" id="s1" name="Tests">Tests</stat>
-<stat pass="0" fail="1" skip="0" id="s1-s1" name="ShopSuite">Tests.ShopSuite</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Tests">Tests</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="ShopSuite">Tests.ShopSuite</stat>
 </suite>
 </statistics>
 <errors>
